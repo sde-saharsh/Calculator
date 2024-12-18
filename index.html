@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <link href="../dist/output.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=backspace" />
+
+</head>
+<body class="bg-blue-300  relative">
+
+    <!-- Calculator Container -->
+
+    <div class="flex items-center justify-center h-screen">
+      <div class="w-60 rounded-2xl bg-black text-white p-4 shadow-lg relative">
+
+        <!-- Top Display -->
+        <div class="bg-black rounded-lg text-right px-3 py-6 text-2xl font-mono">
+          <p id="inputDisplay" class="text-sm text-gray-400"></p>
+          <p id="outputDisplay" class="text-3xl text-white font-bold"></p>
+        </div>
+  
+  
+        <!-- Buttons Section -->
+        <div class="grid grid-cols-4 gap-3 mt-4">
+          <!-- First Row -->
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="clearDisplay()">Ac</button>
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('')">μ</button>
+          <button class="py-2 bg-blue-700 rounded-lg" onclick="appendValue('')">sin</button>
+          <button class="py-2 bg-blue-700 rounded-lg flex justify-center items-center" onclick="deleteChar()"><span class="material-symbols-outlined">backspace</span></button>
+          <!-- Second Row -->
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('7')">7</button>
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('8')">8</button>
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('9')">9</button>
+          <button class="py-2 bg-blue-700 rounded-lg" onclick="appendValue('/')">÷</button>
+          <!-- Third Row -->
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('4')">4</button>
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('5')">5</button>
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('6')">6</button>
+          <button class="py-2 bg-blue-700 rounded-lg" onclick="appendValue('*')">×</button>
+          <!-- Fourth Row -->
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('1')">1</button>
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('2')">2</button>
+          <button class="py-2 bg-gray-700 rounded-lg" onclick="appendValue('3')">3</button>
+          <button class="py-2 bg-blue-700 rounded-lg" onclick="appendValue('+')">+</button>
+          <!-- Fifth Row -->
+          <button class="col-span-2 py-2 bg-gray-700 rounded-lg" onclick="appendValue('1')">0</button>
+          <button class="py-2 bg-blue-700 rounded-lg" onclick="calculateResult()">=</button>
+          <button class="py-2 bg-blue-700 rounded-lg" onclick="appendValue('-')">-</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
